@@ -1,0 +1,243 @@
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 60px auto;
+}
+
+#navbar {
+  padding: 0 120px;
+  width: 100vw;
+  height: 60px;
+  color: whitesmoke;
+}
+
+/* Pages sections starts here */
+
+.homeSetup {
+  width: 100vw;
+  height: auto;
+  background-image: url(/src/images/homeBg.jpg);
+  display: grid;
+  grid-auto-flow: row;
+}
+.explorePage {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  background: linear-gradient(45deg, #21203e 0%, #44446f 100%);
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2fr 4fr;
+  grid-template-areas:
+    "lb cc"
+    "lb cc";
+}
+.contactPageOuter {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  background: linear-gradient(45deg, #0f1012 0%, #36394b 100%);
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+}
+
+.LoginBg {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(45deg, #21203e 0%, #44446f 100%);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+/* pages sections ends here */
+#homeHeroContent {
+  width: 100%;
+  z-index: 3;
+  display: grid;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.1px);
+  -webkit-backdrop-filter: blur(0.1px);
+}
+#homeHeroContent button {
+  position: relative;
+  bottom: 100px;
+  height: 60px;
+  border-radius: 10px;
+}
+#homeHeroContent h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+}
+#earthpng {
+  height: 40vh;
+  width: 70vw;
+  position: absolute;
+  display: grid;
+  place-self: end center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#earthpng img {
+  width: 100%;
+  object-fit: cover;
+  animation-name: earth;
+  animation-duration: 240s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes earth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* explorepage sections ends here */
+.leftBar {
+  display: grid;
+  grid-area: lb;
+  background: #62718d;
+  border: 1px solid black;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 3fr;
+  overflow: auto;
+}
+.textTruncate {
+  width: 100%;
+  height: 60px;
+}
+.leftBarHead {
+  width: 100%;
+}
+.leftBarBody {
+  width: 100%;
+}
+
+.cardCarousel {
+  display: grid;
+  grid-area: cc;
+  border: 1px solid black;
+  padding: 10px;
+  grid-auto-flow: column;
+  overflow: auto;
+  column-gap: 10px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  width: 240px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 5px;
+  scroll-margin-left: 17px;
+  scroll-snap-align: start;
+}
+.card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+.cardBody {
+  display: grid;
+  width: 100%;
+  height: 90px;
+}
+.title {
+  margin: 0;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  height: 40px;
+}
+.dateOfConstruction {
+  margin: 0;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  height: 45px;
+}
+.dateOfDestruction {
+  margin: 0;
+  height: 45px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+}
+.cardButton {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  column-gap: 15px;
+}
+
+#exploreBtn {
+  height: 80px;
+  display: grid;
+  place-items: center;
+  font-size: larger;
+}
+
+/* contact page setup start here.... */
+#formSetup {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 5fr;
+  padding: 20px;
+  background: #fff;
+  align-items: space-around;
+}
+
+#formContainer {
+  background: #866adc;
+  display: grid;
+  padding: 20px;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  overflow: auto;
+  row-gap: 10px;
+}
+#formContainer .card {
+  width: 100%;
+  height: 210px;
+  padding: 0;
+}
+
+#ContactForm {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  display: grid;
+}
+
+.loginOuter {
+  height: 50vh;
+  width: 50vw;
+  border-radius: 0.625rem;
+  background: #0e0f2a;
+  display: grid;
+  padding: 20px;
+}
+
+.loginformcontainer {
+  border-radius: 0.625rem;
+  background: #222239;
+  color: white;
+  padding: 10px;
+  display: grid;
+}
